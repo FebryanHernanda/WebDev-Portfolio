@@ -1,17 +1,126 @@
 * {
   padding: 0;
-  margin: 0;
-  background-color: #101010;
+  margin: 0 auto;
+  box-sizing: border-box;
+  max-width: 1920px;
 }
 
 body {
   color: white;
+  background-color: #101010;
+  /* gap: 60px; */
 }
 
-/* .container {
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  background-color: #101010;
+}
+
+.nav-logo {
+  /* margin-left: 50px; */
+  width: 200px;
+  text-align: center;
+}
+
+.nav-date {
+  /* margin-right: 50px; */
+  width: 200px;
+  text-align: center;
+}
+
+.nav-list ul {
+  /* margin-left: 130px; */
+  width: 200px;
+  font-size: 1.2rem;
+  gap: 30px;
+  display: flex;
+  justify-content: center;
+  /* flex-direction: row; */
+  list-style: none;
+}
+
+.nav-list li > a {
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* end of navbar */
+
+.header-page {
+  /* background-color: antiquewhite; */
+  display: grid;
+  font-size: 8rem;
+  padding: 50px;
+  margin-top: 65px;
+  width: 100%;
+  /* height: 1080px; */
+  text-align: center;
+}
+
+.hero-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 782px;
-} */
+}
+
+.bottom-text {
+  display: grid;
+  align-items: end;
+  width: 100%;
+  height: 350px;
+  margin-left: 20px;
+}
+.bottom-text ul {
+  width: 100%;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.profile-page {
+  /* background-color: blueviolet; */
+  padding: 50px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.headline {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.item {
+  width: 600px;
+  font-size: 2.5rem;
+}
+
+.profile-picture {
+  display: flex;
+  margin-top: -100px;
+}
+
+.profile-about {
+  width: 1500px;
+  font-size: 2rem;
+  margin-top: -80px;
+}

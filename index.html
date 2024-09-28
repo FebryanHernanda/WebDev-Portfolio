@@ -8,29 +8,34 @@
     <title>Febryan Hernanda</title>
 
     <link rel="stylesheet" href="assets/styles/styles.css" />
-    script
 </head>
 
 <body>
     <header>
         <nav>
-            <img src="assets/Icon/febryanWebLogo.svg" alt="Web Logo" style="width: 50px" />
-            <ul>
-                <li><a href="">Home</a></li>
-                <li><a href="">Work</a></li>
-                <li><a href="">About</a></li>
-            </ul>
-            <span>Wednesday, 09 Sept 2024</span>
+            <div class="nav-logo">
+                <img src="assets/Icon/febryanWebLogo.svg" alt="Web Logo" style="width: 50px" />
+            </div>
+            <div class="nav-list">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Work</a></li>
+                    <li><a href="">About</a></li>
+                </ul>
+            </div>
+            <div class="nav-date">
+                <span>Wednesday, 09 Sept 2024</span>
+            </div>
         </nav>
     </header>
 
     <main>
-        <section class="Header-page">
-            <div>
+        <section class="header-page">
+            <div class="hero-header">
                 <h3>Say Bonjour !</h3>
                 <h1>Glad you are here.</h1>
             </div>
-            <div>
+            <div class="bottom-text">
                 <ul>
                     <li>Creative</li>
                     <li>Collaborative</li>
@@ -40,29 +45,37 @@
         </section>
 
         <section class="profile-page">
-            <div>
-                <h6>i'm</h6>
-                <h1>Febryan Hernanda Mashudi</h1>
-                <h6>Based on East Kalimantan</h6>
+            <div class="headline">
+                <div class="profile-name item">
+                    <h6>i'm</h6>
+                    <h1>Febryan Hernanda Mashudi</h1>
+                    <h6>Based on East Kalimantan</h6>
+                </div>
+
+                <div class="profile-position item">
+                    <h2>Front-end Developer</h2>
+                    <h2>& UI/UX Designer</h2>
+                    <h6>Available for a full-time position</h6>
+                </div>
             </div>
 
             <div class="profile-picture">
-                <img src="assets/Icon/fotoProfile.png" alt="Foto Profile">
+                <img id="profile-picture" src="assets/Icon/fotoProfile.png" alt="Foto Profile" />
             </div>
 
-            <div>
-                <h2>Front-end Developer</h2>
-                <h2>& UI/UX Designer</h2>
-                <h6>Available for a full-time position</h6>
-            </div>
-
-            <div>
-                <p>I am a Front-end Developer and UI/UX Designer who is passionate about Software Engineering. I am
-                    passionate about creating intuitive and visually appealing user experiences, as well as building
-                    responsive and easy-to-use web interfaces. I am currently available for a full-time position.</p>
+            <div class="profile-about">
+                <p>
+                    I am a Front-end Developer and UI/UX Designer who is passionate
+                    about Software Engineering. I am passionate about creating intuitive
+                    and visually appealing user experiences, as well as building
+                    responsive and easy-to-use web interfaces. I am currently available
+                    for a full-time position.
+                </p>
                 <button>About Me</button>
             </div>
         </section>
+
+        <div style="height: 1080px; background-color: aqua;"></div>
     </main>
 
     <footer></footer>

@@ -80,6 +80,7 @@ nav {
   height: 350px;
   margin-left: 20px;
 }
+
 .bottom-text ul {
   width: 100%;
   font-size: 2rem;
@@ -213,10 +214,12 @@ nav {
   place-content: center;
   height: 200px;
 }
+
 .logo-card img {
   width: 100px;
   display: flex;
 }
+
 .content {
   text-align: left;
   /* padding: 30px; */

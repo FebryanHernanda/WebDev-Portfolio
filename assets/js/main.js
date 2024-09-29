@@ -14,4 +14,6 @@ const getIconList = () => {
   }
 };
 
-getIconList();
+window.addEventListener("DOMContentLoaded", () => {
+  getIconList();
+});

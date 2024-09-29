@@ -124,3 +124,53 @@ nav {
   font-size: 2rem;
   margin-top: -80px;
 }
+
+.button {
+  margin-top: 30px;
+  border-radius: 20px;
+  padding: 10px;
+  width: 150px;
+  background-color: transparent;
+  border-color: antiquewhite;
+  color: white;
+}
+
+/* end of profile page */
+
+.techstack-page {
+  width: 100%;
+  height: 1080px;
+  margin-top: -50px;
+  padding: 50px;
+  text-align: center;
+  font-size: 4rem;
+}
+
+.tech-icon {
+  min-width: 90%;
+  margin-top: 30px;
+  border: solid 3px antiquewhite;
+  border-radius: 60px;
+  padding: 30px;
+}
+
+#icon {
+  display: flex;
+  align-items: center;
+  /* margin-bottom: -10px; */
+  /* height: auto; */
+  color: white;
+  list-style: none;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+}
+
+#icon li {
+  display: flex;
+}
+
+#icon img {
+  max-width: 100px;
+}
+
+/* end of tech icon page */

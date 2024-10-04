@@ -65,9 +65,7 @@ const getIconList = () => {
   }
 };
 
-window.addEventListener("DOMContentLoaded", getIconList);
-
-// getIconList();
+getIconList();
 
 // date
 const weekdayList = [

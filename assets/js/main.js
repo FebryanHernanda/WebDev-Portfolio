@@ -107,3 +107,26 @@ const dateTes = () => {
 };
 
 dateTes();
+
+/* Hamburger Nav */
+
+const menuList = document.getElementById("menu-list");
+const hamMenu = document.getElementById("ham-menu");
+
+menuList.style.maxHeight = "0px";
+
+hamMenu.addEventListener("click", () => {
+  if (menuList.style.maxHeight == "0px") {
+    menuList.style.maxHeight = "300px";
+  } else {
+    menuList.style.maxHeight = "0px";
+  }
+});
+
+document.querySelectorAll(".nav-link").forEach((n) =>
+  n.addEventListener("click", () => {
+    menuList.style.maxHeight = "0px";
+  })
+);
+
+/* end of humberger */

@@ -400,6 +400,10 @@ td {
   font-weight: bold;
 }
 
+.data-row:active {
+  font-weight: bold;
+}
+
 .more {
   border-color: black;
   color: black;

@@ -19,6 +19,7 @@
 :root {
   --primary-color: #f7dec1;
   --lessPrimary-color: #a4927d;
+  --red-color: #ff1e56;
 }
 
 html {
@@ -44,7 +45,6 @@ nav {
   position: fixed;
   top: 0;
   background-color: #101010;
-  /* background-color: #ff1e56; */
   font-size: 1rem;
   z-index: 10;
 }
@@ -92,18 +92,18 @@ nav {
   background-color: #fff;
   border-radius: 25px;
   position: absolute;
-  top: 7%;
+  top: 45%;
   bottom: 50%;
   transform: translate(-50%, -50%);
   transition: 0.3s ease;
 }
 
 .ham-menu span:nth-child(1) {
-  top: 5%;
+  top: 55%;
 }
 
 .ham-menu span:nth-child(3) {
-  top: 9%;
+  top: 35%;
 }
 
 /* end of navbar */
@@ -226,6 +226,17 @@ nav {
   color: white;
   font-size: 1.3rem;
   font-weight: bold;
+}
+
+.button:hover {
+  background-color: var(--primary-color);
+  color: black;
+}
+
+.more:hover {
+  font-weight: bolder;
+  color: white;
+  background-color: black;
 }
 
 /* end of profile page */
@@ -382,12 +393,11 @@ th:nth-last-child(2) {
 .table-list th,
 td {
   padding: 10px;
-  border-color: red;
   border-bottom: solid 3px black;
 }
 
-#data-row:hover {
-  background-color: bisque;
+.data-row:hover {
+  font-weight: bold;
 }
 
 .more {
@@ -429,9 +439,20 @@ td {
   align-content: center;
 }
 
+.contact-icon img:hover {
+  /* background-color: var(--red-color); */
+  filter: brightness(0) saturate(100%) invert(96%) sepia(35%) saturate(5055%)
+    hue-rotate(298deg) brightness(118%) contrast(101%);
+}
+
 .contact-icon img {
   width: 50px;
 }
+
+/* .contact-icon img:hover {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(9%) saturate(7%)
+    hue-rotate(240deg) brightness(101%) contrast(101%);
+} */
 
 /* end contact page */
 
@@ -440,7 +461,7 @@ td {
   place-content: center;
   align-items: center;
   position: fixed;
-  background-color: #ff1e56;
+  background-color: var(--red-color);
   top: 250px;
   width: 60px;
   height: 230px;
@@ -565,7 +586,7 @@ td {
   }
 
   .profile-name {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   .profile-position {
@@ -637,26 +658,38 @@ td {
 
 @media screen and (max-width: 768px) {
   nav {
-    height: 600px;
+    height: 100px;
     align-items: flex-start;
     background-color: transparent;
-    /* background-color: rgb(16, 16, 16, 0.5); */
+    background-color: #101010;
   }
 
   .nav-list ul {
     position: absolute;
     /* height: 200px; */
     width: 100%;
-    height: 200px;
-    top: 0;
+    height: 160px;
+    top: 100px;
     left: 0;
     right: 0;
     flex-direction: column;
     text-align: center;
     gap: 10px;
     background-color: rgb(16, 16, 16, 0.9);
-    font-size: 2rem;
+    font-size: 1.5rem;
     overflow: hidden;
+    text-transform: uppercase;
+  }
+
+  .nav-list li {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+  }
+
+  .nav-list li:hover {
+    border: 1px solid white;
+    font-weight: bolder;
   }
 
   #menu-list {
@@ -691,7 +724,7 @@ td {
   }
 
   .profile-name {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .profile-position {
@@ -716,12 +749,13 @@ td {
     margin-top: -20px;
   }
 
-  #icon {
-    width: initial;
+  .contact-icon li {
+    padding: 15px;
+    border-radius: 15px;
   }
 
   #icon img {
-    width: 40px;
+    width: 50px;
   }
 
   .contact-page h3 {
@@ -735,7 +769,7 @@ td {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
   nav {
     width: 100%;
   }

@@ -182,7 +182,7 @@ const dataShowcase = [
     name: "Karangsuci Page",
     tools: "NextJS, Typescript, & Tailwind CSS",
     info: "I'm diving headfirst into the world of professional web development with my first company profile website! I'm using powerful tools like Next.js, TypeScript, and Tailwind CSS to build it quickly and efficiently. This project is still in progress, and I'm excited to add a content management system to make it even more dynamic.",
-    image: "../Icon/Showcase/karangsuci.png",
+    image: "../Showcase/karangsuci.png",
     demo: "https://karangsuci-landing.pages.dev",
     repo: "",
   },

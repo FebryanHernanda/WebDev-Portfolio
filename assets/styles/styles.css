@@ -1022,6 +1022,10 @@ footer {
     font-size: 0.8rem;
   }
 
+  .card-showcase {
+    transition: none;
+  }
+
   .title-showcase {
     padding: 10px;
   }

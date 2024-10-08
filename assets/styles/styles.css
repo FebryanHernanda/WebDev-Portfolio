@@ -449,9 +449,9 @@ nav {
   opacity: 1;
 }
 
-/* .card-content:active {
+.card-content:active {
   opacity: 1;
-} */
+}
 
 .button-small {
   padding: 5px;

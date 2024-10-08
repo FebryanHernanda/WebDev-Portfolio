@@ -40,7 +40,9 @@
     <main>
         <section class="header-page" id="header">
             <div class="hero-header">
-                <h3 id="greetings-words">Say <span id="header-words">Bonjour </span>!</h3>
+                <h3 id="greetings-words">
+                    Say Hola !
+                </h3>
                 <h1>Glad you are here.</h1>
             </div>
             <div class="bottom-text">
@@ -65,7 +67,9 @@
                     <h2>& UI/UX Designer</h2>
 
                     <div class="job-info">
-                        <span class="circle-dot"></span>
+                        <div class="circle-dot">
+                            <span></span>
+                        </div>
                         Available for a full-time position
                     </div>
 
@@ -73,18 +77,24 @@
             </div>
 
             <div class="profile-picture">
-                <img id="profile-picture" src="assets/Icon/fotoProfile.png" alt="Foto Profile" />
+                <img id="profile-picture" src="assets/Icon/fotoProfile.png" alt="Profile Picture" />
             </div>
 
             <div class="profile-about">
                 <p>
-                    I am a Front-end Developer and UI/UX Designer who is passionate
-                    about Software Engineering. I am passionate about creating intuitive
-                    and visually appealing user experiences, as well as building
-                    responsive and easy-to-use web interfaces. I am currently available
-                    for a full-time position.
+                    As a Junior Front-end Developer and UI/UX Designer, I'm eager to learn and grow within a
+                    collaborative team. I'm driven by the challenge of creating visually appealing and user-friendly
+                    digital experiences. I believe in the power of design to make technology more accessible and
+                    intuitive. I'm excited to contribute my skills in building responsive and engaging web interfaces,
+                    while constantly learning new techniques and best practices. I'm confident that my dedication and
+                    enthusiasm will contribute to the development of exceptional digital products.
                 </p>
-                <button class="button">About Me</button>
+                <a href="https://drive.google.com/file/d/1FJ6TDPC-eX9L19yv49eaq8AUzYOT6Ayo/view?usp=sharing"
+                    target="_blank">
+                    <button class="button">
+                        About Me
+                    </button>
+                </a>
             </div>
         </section>
 
@@ -92,7 +102,7 @@
             <h1 id="headline">Tech Stack</h1>
             <div class="container">
                 <div class="tech-icon" style="color: white;">
-                    <ul id="icon">
+                    <ul id="icon" aria-label="Tech Stack Icon">
                     </ul>
                 </div>
             </div>
@@ -104,7 +114,7 @@
                 <div class="card" id="border-right-hidden">
                     <span class="card-number">01.</span>
                     <div class="logo-card">
-                        <img src="assets/Icon/Services/webIcon.svg" alt="">
+                        <img src="assets/Icon/Services/webIcon.svg" alt="Website Icon">
                     </div>
                     <div class="content">
                         <h4>Web Development</h4>
@@ -114,7 +124,7 @@
                 <div class="card" id="border-right-hidden">
                     <span class="card-number">02.</span>
                     <div class="logo-card">
-                        <img src="assets/Icon/Services/graphicDesignIcon.svg" alt="">
+                        <img src="assets/Icon/Services/uiuxIcon.svg" alt="UI & UX Design Icon">
                     </div>
                     <div class="content">
                         <h4>UI/UX Design</h4>
@@ -126,7 +136,7 @@
                 <div class="card" id="border-right-hidden">
                     <span class="card-number">03.</span>
                     <div class="logo-card">
-                        <img src="assets/Icon/Services/uiuxIcon.svg" alt="">
+                        <img src="assets/Icon/Services/graphicDesignIcon.svg" alt="Graphic Design Icon">
                     </div>
                     <div class="content">
                         <h4>Graphic Design</h4>
@@ -138,7 +148,7 @@
                 <div class="card">
                     <span class="card-number">04.</span>
                     <div class="logo-card">
-                        <img src="assets/Icon/Services/dataIcon.svg" alt="">
+                        <img src="assets/Icon/Services/dataIcon.svg" alt="Data Analyst Icon">
                     </div>
                     <div class="content">
                         <h4>Data Analyst</h4>
@@ -153,40 +163,36 @@
                 <div class="title-showcase">
                     <h3>Discover My</h3>
                     <h1>Workshop of Creativity</h1>
-                    <h3>Check my showcase area</h3>
+                    <h3>Check My Showcase Area</h3>
                 </div>
 
-                <div class="card-showcase">
-                    <aside>
-                        <h1>The project will be showing</h1>
-                    </aside>
+                <div style="color: black;" class="card-showcase" id="card-showcase">
+                    <div class="card-content" aria-labelledby="Showcase Image">
+                        <h1 id="title-content"></h1>
+                        <p id="desc-content"></p>
+                        <ul class="button-img">
+                            <li><a id="repository-link" href="#" target="_blank">
+                                    <button class="button-small">Repository</button>
+                                </a></li>
+                            <li><a id="livedemo-link" href="#" target="_blank">
+                                    <button class="button-small">Live Demo</button>
+                                </a></li>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="table-list">
-                    <table cellspacing="0">
-                        <tr>
-                            <th>Name</th>
-                            <th>Description</th>
-                            <th>Tools & Library</th>
-                        </tr>
-
-                        <tr class="data-row">
-                            <td>Centro comercial Moctezuma</td>
-                            <td>Francisco Chang</td>
-                            <td>Mexico</td>
-                        </tr>
-                        <tr class="data-row">
-                            <td>Lorem, ipsum dolor.</td>
-                            <td>Francisco Chang</td>
-                            <td>Mexico</td>
-                        </tr>
-                        <tr class="data-row">
-                            <td>Lorem ipsum dolor sit amet.</td>
-                            <td>Francisco Chang</td>
-                            <td>Mexico</td>
-                        </tr>
+                    <table cellspacing="0" id="data-showcase">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Tools & Library</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
                     </table>
-                    <button class="button more">More</button>
+                    <button class="button more" id="button-more">More</button>
                 </div>
 
             </div>
@@ -196,13 +202,13 @@
             <h3>LOOKING FOR A NEW TALENT ?</h3>
             <h1>LETS CONNECT WITH ME</h1>
             <div class="contact-icon">
-                <ul id="icon">
+                <ul id="icon-contact">
                     <li><a href="mailto:febryanhernandamashudi@gmail.com" target="_blank"><img
-                                src="assets/Icon/SocialMedia/emailIcon.svg" alt=""></a></li>
+                                src="assets/Icon/SocialMedia/emailIcon.svg" alt="Email Icon"></a></li>
                     <li><a href="https://www.linkedin.com/in/febryan-hernanda-mashudi/" target="_blank"><img
-                                src="assets/Icon/SocialMedia/linkedinIcon.svg" alt=""></a></li>
+                                src="assets/Icon/SocialMedia/linkedinIcon.svg" alt="Linkedin Icon"></a></li>
                     <li><a href="https://wa.me/6281394566303" target="_blank"><img
-                                src="assets/Icon/SocialMedia/whatsappIcon.svg" alt=""></a></li>
+                                src="assets/Icon/SocialMedia/whatsappIcon.svg" alt="Whatsapp Icon"></a></li>
                 </ul>
             </div>
         </section>
@@ -225,7 +231,7 @@
             <ul>
                 <li class="footer-text">© 2024 Febryan Hernanda M.</li>
                 <li id="footer-job-info">Available for a full-time position</li>
-                <li class="footer-text">Designed and Developed with ❤️</li>
+                <li class="footer-text">A blend of art and code</li>
             </ul>
         </div>
     </footer>

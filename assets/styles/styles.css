@@ -51,7 +51,6 @@ nav {
 
 .nav-logo {
   width: 200px;
-  /* text-align: center; */
   z-index: 10;
 }
 
@@ -60,7 +59,6 @@ nav {
 }
 
 .nav-date {
-  /* margin-right: 50px; */
   width: 200px;
   text-align: center;
 }
@@ -108,6 +106,8 @@ nav {
 
 /* end of navbar */
 
+/* Hero Section */
+
 .header-page {
   /* background-color: antiquewhite; */
   display: grid;
@@ -115,7 +115,6 @@ nav {
   padding: 50px;
   /* margin-top: 160px; */
   width: 100%;
-  height: 90vh;
   text-align: center;
 }
 
@@ -124,7 +123,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 180px;
+  margin-top: 200px;
 }
 
 .hero-header h1 {
@@ -135,7 +134,7 @@ nav {
   display: grid;
   align-items: end;
   width: 100%;
-  height: 350px;
+  height: 280px;
   font-size: 2rem;
   position: relative;
   right: -10px;
@@ -148,21 +147,17 @@ nav {
   list-style: none;
 }
 
-#greetings-words {
-  font-size: 5rem;
-}
+/* end of Hero Section */
 
-/* end of header */
+/* Profile Section */
 
 .profile-page {
-  /* background-color: blueviolet; */
   padding: 50px;
   width: 100%;
   height: 100%;
   display: flex;
   flex-wrap: wrap;
   text-align: center;
-  margin-top: 30px;
 }
 
 .headline {
@@ -185,7 +180,8 @@ nav {
   font-size: 2rem;
   height: 200px;
   align-content: center;
-  margin-top: 10px;
+  position: relative;
+  top: 30px;
 }
 
 .job-info {
@@ -198,11 +194,29 @@ nav {
 .circle-dot {
   width: 15px;
   height: 15px;
-  background-color: greenyellow;
+  background-color: rgb(136, 209, 27);
   border-radius: 50%;
-  /* margin-right: -90px; */
   display: inline-block;
   margin-right: 20px;
+  position: relative;
+}
+
+.circle-dot span {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  border-radius: inherit;
+  opacity: 0.8;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  100% {
+    opacity: 0;
+    transform: scale(2);
+    background-color: greenyellow;
+  }
 }
 
 .profile-picture {
@@ -239,7 +253,9 @@ nav {
   background-color: black;
 }
 
-/* end of profile page */
+/* end of profile section */
+
+/* tech stack section */
 
 .techstack-page {
   width: 100%;
@@ -255,12 +271,15 @@ nav {
   border: solid 3px antiquewhite;
   border-radius: 60px;
   padding: 20px;
+  overflow: hidden;
 }
 
 #icon {
   display: flex;
   color: white;
   list-style: none;
+  animation: icon-running 20s linear infinite;
+  gap: 30px;
 }
 
 #icon li {
@@ -271,7 +290,19 @@ nav {
   max-width: 80px;
 }
 
-/* end of tech icon page */
+@keyframes icon-running {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* end of tech stack section */
+
+/* Service Section */
 
 .service-page {
   display: flex;
@@ -287,7 +318,6 @@ nav {
 .card-wrapper {
   display: flex;
   flex-wrap: wrap;
-  /* gap: 30px; */
 }
 
 .card-number {
@@ -326,6 +356,10 @@ nav {
   color: var(--primary-color);
 }
 
+/* end of service section */
+
+/* showcase section */
+
 .showcase-page {
   padding: 50px;
 }
@@ -337,7 +371,7 @@ nav {
     "showcase list list ";
   grid-template-columns: auto-fit;
   text-align: center;
-  row-gap: 30px;
+  gap: 30px;
   padding: 50px;
   margin-top: 80px;
   border-radius: 100px;
@@ -361,12 +395,77 @@ nav {
 
 .card-showcase {
   grid-area: showcase;
-  padding: 30px;
-  border: solid 2px black;
-  background-color: transparent;
+  border: solid 3px black;
+  border-radius: 30px;
   grid-template-columns: 100px;
-  width: 350px;
-  height: 300px;
+  width: 500px;
+  height: 350px;
+  overflow: hidden;
+  background-image: url("../Icon/Showcase/default.png");
+  transition: background-image 1s ease-in-out;
+  background-size: cover;
+  background-position: center center;
+}
+
+.card-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  pointer-events: none;
+  color: var(--primary-color);
+}
+
+.card-content > h1 {
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.card-content > p {
+  font-size: 13px;
+}
+
+.card-content ul {
+  display: flex;
+  width: 300px;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.card-content.visible {
+  pointer-events: auto;
+}
+
+.card-content:hover {
+  color: white;
+  opacity: 1;
+}
+
+/* .card-content:active {
+  opacity: 1;
+} */
+
+.button-small {
+  padding: 5px;
+  border-radius: 10px;
+  border-color: none;
+  margin-top: 20px;
+  background-color: transparent;
+  border: solid 2px var(--primary-color);
+  color: white;
+}
+
+.button-small:hover {
+  color: black;
+  background-color: var(--primary-color);
 }
 
 .table-list {
@@ -383,11 +482,12 @@ nav {
 
 td:nth-last-child(1),
 th:nth-last-child(1) {
-  text-align: right;
+  text-align: center;
 }
+
 td:nth-last-child(2),
 th:nth-last-child(2) {
-  text-align: center;
+  text-align: left;
 }
 
 .table-list th,
@@ -396,7 +496,11 @@ td {
   border-bottom: solid 3px black;
 }
 
-.data-row:hover {
+.data-row {
+  font-size: 1.5rem;
+}
+
+#data-showcase tr:hover {
   font-weight: bold;
 }
 
@@ -410,6 +514,8 @@ td {
 }
 
 /* end of showcase section */
+
+/* contact section */
 
 .contact-page {
   text-align: center;
@@ -436,15 +542,20 @@ td {
   align-content: center;
 }
 
+.contact-icon ul {
+  display: flex;
+}
+
 .contact-icon li {
   border: 3px solid bisque;
   padding: 20px;
   border-radius: 20px;
   align-content: center;
+  width: 100px;
+  list-style-type: none;
 }
 
-.contact-icon img:hover {
-  /* background-color: var(--red-color); */
+.contact-icon li:hover {
   filter: brightness(0) saturate(100%) invert(96%) sepia(35%) saturate(5055%)
     hue-rotate(298deg) brightness(118%) contrast(101%);
 }
@@ -453,12 +564,14 @@ td {
   width: 50px;
 }
 
-/* .contact-icon img:hover {
-  filter: brightness(0) saturate(100%) invert(0%) sepia(9%) saturate(7%)
-    hue-rotate(240deg) brightness(101%) contrast(101%);
-} */
+.contact-icon img:hover {
+  filter: brightness(0) saturate(100%) invert(96%) sepia(35%) saturate(5055%)
+    hue-rotate(298deg) brightness(118%) contrast(101%);
+}
 
-/* end contact page */
+/* end contact section */
+
+/* aside bar section */
 
 .contact-sidebar {
   display: flex;
@@ -487,14 +600,24 @@ td {
     hue-rotate(325deg) brightness(109%) contrast(101%);
 }
 
+/* end of aside sidebar */
+
+/* footer section */
+
+footer {
+  height: 100px;
+}
+
 .container-footer ul {
-  padding: 50px;
-  margin-right: -20px;
+  padding: 20px;
   display: flex;
-  flex-direction: row;
   list-style: none;
-  /* align-items: end; */
   color: var(--primary-color);
+}
+
+#footer-job-info {
+  position: relative;
+  left: -20px;
 }
 
 .footer-text {
@@ -505,7 +628,9 @@ td {
   text-decoration-line: line-through;
 } */
 
-/* responsive */
+/* end of footer section */
+
+/* responsive web settings */
 
 @media screen and (min-width: 1900px) {
   .nav-logo {
@@ -595,6 +720,7 @@ td {
 
   .profile-position {
     font-size: 1.5rem;
+    top: 10px;
   }
 
   .profile-page {
@@ -609,6 +735,13 @@ td {
     order: 2;
     margin-top: 20px;
     font-size: 1.5rem;
+  }
+
+  .profile-position {
+    font-size: 1.2rem;
+  }
+  .job-info {
+    font-size: 1rem;
   }
 
   .card-wrapper {
@@ -653,10 +786,6 @@ td {
 
   #icon {
     max-width: 100%;
-  }
-
-  #icon img {
-    width: 50px;
   }
 }
 
@@ -733,6 +862,7 @@ td {
 
   .profile-position {
     font-size: 1rem;
+    top: 5px;
   }
 
   .profile-about {
@@ -742,6 +872,7 @@ td {
   .job-info {
     font-size: 1rem;
     left: -10px;
+    bottom: -15px;
   }
 
   .circle-dot {
@@ -770,6 +901,10 @@ td {
   footer {
     text-align: center;
     font-size: 0.8rem;
+  }
+
+  #footer-job-info {
+    left: -18px;
   }
 }
 
@@ -846,7 +981,7 @@ td {
   }
 
   #icon img {
-    width: 25px;
+    width: 50px;
   }
 
   .service-page {
@@ -855,6 +990,20 @@ td {
 
   .card {
     height: initial;
+  }
+
+  .card-showcase {
+    height: 300px;
+  }
+
+  .card-content > h1 {
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--primary-color);
+  }
+
+  .card-content > p {
+    font-size: 10px;
   }
 
   .logo-card {
@@ -910,6 +1059,14 @@ td {
     padding: initial;
   }
 
+  .contact-icon li {
+    width: 60px;
+  }
+
+  .contact-icon img {
+    width: 25px;
+  }
+
   footer {
     font-size: 0.5rem;
   }
@@ -923,11 +1080,13 @@ td {
     font-size: 5px;
   }
 
-  #icon img {
-    width: 25px;
+  #footer-job-info {
+    left: -7px;
   }
 
   .contact-sidebar {
     display: none;
   }
 }
+
+/* end of responsive web settings */
